@@ -1,4 +1,4 @@
-package com.williamscarog;
+package com.williamscarog.musicklok.models;
 
 public class Song extends Audio{
 
@@ -20,5 +20,14 @@ public class Song extends Audio{
 
     public void setAlbum(String album) {
         this.album = album;
+    }
+
+    @Override
+    public int getRating(){
+        if (getTotalLikes() > 5000){
+            return 9;
+        }else {
+            return 4;
+        }
     }
 }

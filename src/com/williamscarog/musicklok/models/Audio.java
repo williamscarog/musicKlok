@@ -1,12 +1,21 @@
-package com.williamscarog;
+package com.williamscarog.musicklok.models;
 
 public class Audio {
     private String title;
     private double duration;
     private String author;
-    private int likes;
-    private float rating;
+    private int totalLikes;
+    private int rating;
     private int totalPlays;
+
+    //METHODS
+    public void like(){
+        this.totalLikes++;
+    }
+
+    public void play(){
+        this.totalPlays++;
+    }
 
     //GETTERS AND SETTERS
     public String getTitle() {
@@ -33,20 +42,20 @@ public class Audio {
         this.author = author;
     }
 
-    public int getLikes() {
-        return likes;
-    }
-
-    public void setLikes(int likes) {
-        this.likes = likes;
-    }
-
-    public float getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(float rating) {
+    public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    public int getTotalLikes() {
+        return totalLikes;
+    }
+
+    public void setTotalLikes(int totalLikes) {
+        this.totalLikes = totalLikes;
     }
 
     public int getTotalPlays() {

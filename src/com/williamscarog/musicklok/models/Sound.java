@@ -1,4 +1,4 @@
-package com.williamscarog;
+package com.williamscarog.musicklok.models;
 
 public class Sound extends Audio{
     private String soundType;
