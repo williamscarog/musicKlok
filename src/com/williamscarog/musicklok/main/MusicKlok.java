@@ -1,6 +1,7 @@
 package com.williamscarog.musicklok.main;
 
 import com.williamscarog.musicklok.models.Audio;
+import com.williamscarog.musicklok.models.MyFavorite;
 import com.williamscarog.musicklok.models.Song;
 import com.williamscarog.musicklok.models.Sound;
 
@@ -19,6 +20,7 @@ public class MusicKlok {
         Sound pirate = new Sound();
         pirate.setAuthor("Jack Sparow");
         pirate.setSoundType("Human");
+        pirate.setTitle("Ärgs, Voice");
 
         System.out.println("The sound Author is: "+pirate.getAuthor());
         System.out.println("and the sound type is: "+pirate.getSoundType());
@@ -31,8 +33,20 @@ public class MusicKlok {
             aleluya.like();
         }
 
+        for (int counterOfPlays = 0; counterOfPlays < 100; counterOfPlays++) {
+            pirate.play();
+        }
+
+        for (int counterOfLikes =0; counterOfLikes < 20; counterOfLikes++) {
+            pirate.like();
+        }
+
         System.out.println("The total of likes of the song : "+ aleluya.getTitle()+ " is "+aleluya.getTotalLikes());
         System.out.println("The total of plays of the song: "+ aleluya.getTitle()+ " is "+aleluya.getTotalPlays());
+
+        MyFavorite myLoved = new MyFavorite();
+        myLoved.add(aleluya);
+        myLoved.add(pirate);
 
 
     }
